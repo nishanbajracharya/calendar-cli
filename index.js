@@ -1,21 +1,21 @@
-const getDay = require('date-fns/getDay');
-const format = require('date-fns/format');
-const addDays = require('date-fns/addDays');
-const getDate = require('date-fns/getDate');
-const getYear = require('date-fns/getYear');
-const isToday = require('date-fns/isToday');
-const getMonth = require('date-fns/getMonth');
-const isWeekend = require('date-fns/isWeekend');
-const addMonths = require('date-fns/addMonths');
-const subMonths = require('date-fns/subMonths');
-const startOfDay = require('date-fns/startOfDay');
-const endOfMonth = require('date-fns/endOfMonth');
-const startOfWeek = require('date-fns/startOfWeek');
-const isSameMonth = require('date-fns/isSameMonth');
-const startOfMonth = require('date-fns/startOfMonth');
-const isLastDayOfMonth = require('date-fns/isLastDayOfMonth');
-const eachDayOfInterval = require('date-fns/eachDayOfInterval');
-const isFirstDayOfMonth = require('date-fns/isFirstDayOfMonth');
+import getDay from 'date-fns/getDay';
+import format from 'date-fns/format';
+import addDays from 'date-fns/addDays';
+import getDate from 'date-fns/getDate';
+import getYear from 'date-fns/getYear';
+import isToday from 'date-fns/isToday';
+import getMonth from 'date-fns/getMonth';
+import isWeekend from 'date-fns/isWeekend';
+import addMonths from 'date-fns/addMonths';
+import subMonths from 'date-fns/subMonths';
+import startOfDay from 'date-fns/startOfDay';
+import endOfMonth from 'date-fns/endOfMonth';
+import startOfWeek from 'date-fns/startOfWeek';
+import isSameMonth from 'date-fns/isSameMonth';
+import startOfMonth from 'date-fns/startOfMonth';
+import isLastDayOfMonth from 'date-fns/isLastDayOfMonth';
+import eachDayOfInterval from 'date-fns/eachDayOfInterval';
+import isFirstDayOfMonth from 'date-fns/isFirstDayOfMonth';
 
 function formatDateObject(days, currentMonth) {
   return days.map(day => ({
@@ -60,7 +60,7 @@ function getNextDaysOfWeek(date) {
   return daysArray;
 }
 
-function get(date) {
+export function getCalendar(date) {
   const today = new Date();
 
   const firstDay = startOfDay(startOfMonth(date));
@@ -96,7 +96,4 @@ function get(date) {
   };
 }
 
-module.exports = {
-  get,
-  getCalendar: get,
-};
+export default getCalendar;

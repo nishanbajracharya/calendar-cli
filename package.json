@@ -1,15 +1,22 @@
 {
   "name": "calendar-cli",
   "version": "1.0.0",
-  "description": "",
+  "description": "A calendar generator",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "babel-node index.js",
+    "build": "babel index.js -o lib.js"
   },
-  "keywords": [],
+  "keywords": ["calendar"],
   "author": "Nishan Bajracharya <nisbaj11@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "date-fns": "^2.11.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.0"
   }
 }
