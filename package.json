@@ -1,0 +1,12 @@
+{
+  "name": "calendar-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Nishan Bajracharya <nisbaj11@gmail.com>",
+  "license": "MIT"
+}
