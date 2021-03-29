@@ -60,7 +60,7 @@ function getNextDaysOfWeek(date) {
   return daysArray;
 }
 
-export function getCalendar(date) {
+export function getCalendar(date = new Date) {
   const today = new Date();
 
   const firstDay = startOfDay(startOfMonth(date));
